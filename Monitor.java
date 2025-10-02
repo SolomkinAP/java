@@ -1,14 +1,14 @@
-// Monitor.java
 public class Monitor {
-    private double size;
+    private double diagonalInches;
+    private String resolution;
 
-    public Monitor(double size) {
-        this.size = size;
+    public Monitor(double diagonalInches, String resolution) {
+        this.diagonalInches = diagonalInches;
+        this.resolution = resolution;
     }
 
     @Override
     public String toString() {
-        return "Монитор: " + size + " дюймов";
+        return "Монитор: " + diagonalInches + "\" " + resolution;
     }
 }
-

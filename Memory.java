@@ -1,13 +1,14 @@
-// Memory.java
 public class Memory {
-    private int size;
+    private int sizeGB;
+    private String type;
 
-    public Memory(int size) {
-        this.size = size;
+    public Memory(int sizeGB, String type) {
+        this.sizeGB = sizeGB;
+        this.type = type;
     }
 
     @Override
     public String toString() {
-        return "ОЗУ: " + size + " GB";
+        return "Память: " + sizeGB + "GB " + type;
     }
 }
