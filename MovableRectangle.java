@@ -3,12 +3,12 @@ public class MovableRectangle implements Movable {
     private MovablePoint bottomRight;
 
     public MovableRectangle(int x1, int y1, int x2, int y2, int xSpeed, int ySpeed) {
-        // создаём две точки с одинаковой скоростью
+        
         this.topLeft = new MovablePoint(x1, y1, xSpeed, ySpeed);
         this.bottomRight = new MovablePoint(x2, y2, xSpeed, ySpeed);
     }
 
-    // проверка, что скорости точек совпадают
+    
     public boolean speedsAreEqual() {
         return topLeft.xSpeed == bottomRight.xSpeed && topLeft.ySpeed == bottomRight.ySpeed;
     }
@@ -42,3 +42,4 @@ public class MovableRectangle implements Movable {
         return "MovableRectangle[topLeft=" + topLeft + ", bottomRight=" + bottomRight + "]";
     }
 }
+
