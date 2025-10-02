@@ -1,10 +1,18 @@
 public class MovableCircle implements Movable {
     private int radius;
-    private MovablePoint center; // делегируем движение к точке
+    private MovablePoint center;
 
     public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius) {
         this.center = new MovablePoint(x, y, xSpeed, ySpeed);
         this.radius = radius;
+    }
+
+    @Override
+    public String toString() {
+        return "MovableCircle{" +
+                "radius=" + radius +
+                ", center=" + center.toString() +
+                '}';
     }
 
     @Override
@@ -25,10 +33,5 @@ public class MovableCircle implements Movable {
     @Override
     public void moveRight() {
         center.moveRight();
-    }
-
-    @Override
-    public String toString() {
-        return "MovableCircle[radius=" + radius + ", center=" + center + "]";
     }
 }
