@@ -1,41 +1,19 @@
 // Shape.java
-public abstract class Shape {
-    protected String color;
-    protected boolean filled;
-
-    public Shape() {
-        this.color = "green";
-        this.filled = true;
+public class Shape {
+    public String getType() {
+        return "Фигура";
     }
 
-    public Shape(String color, boolean filled) {
-        this.color = color;
-        this.filled = filled;
+    public double getArea() {
+        return 0;
     }
 
-    public String getColor() {
-        return color;
+    public double getPerimeter() {
+        return 0;
     }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public boolean isFilled() {
-        return filled;
-    }
-
-    public void setFilled(boolean filled) {
-        this.filled = filled;
-    }
-
-    // абстрактные методы
-    public abstract double getArea();
-    public abstract double getPerimeter();
 
     @Override
     public String toString() {
-        return "A Shape with color of " + color + " and " + (filled ? "filled" : "not filled");
+        return getType();
     }
 }
-
