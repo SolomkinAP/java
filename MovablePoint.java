@@ -1,5 +1,4 @@
 public class MovablePoint implements Movable {
-    // Спецификаторы доступа package-private (~) как в UML диаграмме
     int x;
     int y;
     int xSpeed;
@@ -24,7 +23,7 @@ public class MovablePoint implements Movable {
 
     @Override
     public void moveUp() {
-        y -= ySpeed; // y уменьшается при движении вверх в стандартных экранных координатах
+        y -= ySpeed; 
     }
 
     @Override
@@ -41,4 +40,5 @@ public class MovablePoint implements Movable {
     public void moveRight() {
         x += xSpeed;
     }
+
 }
