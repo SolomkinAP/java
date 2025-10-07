@@ -1,12 +1,3 @@
-public class Magazine implements Printable {
-    private String title;
-
-    public Magazine(String title) {
-        this.title = title;
-    }
-
-    @Override
-    public void print() {
-        System.out.println("Журнал: '" + title + "'");
-    }
+public class Magazine {
+    public static void printMagazines(Printable[]arr){for(Printable p:arr)if(p instanceof Journal j)System.out.println(j.getName());}
 }
